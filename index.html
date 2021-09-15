@@ -1,5 +1,125 @@
-<html>
-<body>
-	Hello World!
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pierre-Henri Dezanneau | Développeur full stack</title>>
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="" data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
+  <div class="container header-contianer">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
+        <h1>Pierre-Henri Dezanneau 🌱</h1>
+        <h2>Développeur full stack</h2>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
+        <ul class="icons no-print">
+          <li>
+            <a target="_blank" href="https://www.linkedin.com/in/phdezanneau"
+              class="button button--sacnite button--round-l">
+              <i class="fab fa-linkedin" title="Linkedin link"></i>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/phdezann" class="button button--sacnite button--round-l">
+              <i class="fab fa-github" title="Github link"></i>
+            </a>
+          </li>
+        </ul>
+
+        <template id="template-email">
+          <p>Cliquer pour afficher l'email complet.</p>
+        </template>
+
+        <p>
+          <span id="email"><a href="https://mailhide.io/e/HpWNU3KJ"
+              onclick="popup=window.open('https://mailhide.io/e/HpWNU3KJ','mailhidepopup','width=580,height=635'); return false;">p......@gmail.com</a></span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="container intro-container">
+        <h3></h3>
+        <div class="row clearfix">
+          <div class="col-xs-12 col-sm-4 col-md-3 no-print">
+            <span class="profile-img" style="background-image: url(profile.jpg)"></span>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
+            <p>Salut, je m’appelle Pierre-Henri ✋</p>
+
+            <template id="template-hackteur">
+              <p>D'après le livre <a href="https://leanpub.com/hackteur" target="_blank">Devenez hACkTEUR</a> d'<a
+                  href="https://www.linkedin.com/in/alexis8nicolas">Alexis Nicolas</a> un hackteur, contraction des
+                mots hackeur et
+                acteur, incarne l'action avec l'éthique des hackers. </p>
+              <p>Définie par la RFC 1983, un hacker est une personne qui se délecte de la compréhension approfondie du
+                fonctionnement interne d'un système, en particulier des ordinateurs et réseaux informatiques. L'éthique
+                des hackers inclut le libre accès à la connaissance, la transparence et le plaisir d'exercer sa
+                pratique.</p>
+            </template>
+
+            <template id="template-écomanité">
+              <p>Néologisme créé par Bertrand Piccard dans son livre Changer d'Altitude, contraction des mots écologie,
+                économie et
+                humanisme, invite à une approche systémique pour répondre aux enjeux environnementaux.</p>
+            </template>
+
+            <p>Ingénieur informatique passionné dans l’architecture et le développement logiciel, j’essaie d’être un
+              <span id="tooltip-hackteur"><mark>hackteur ᐩ</mark></span> dans le défi de notre transition écologique. Je
+              crois en
+              <span id="tooltip-écomanité"><mark>l’écomanité ᐩ</mark></span> et en la conception
+              responsable de service numérique pour créer des solutions originales, sobres et efficientes.
+
+            </p>
+
+            <p>
+              Mon objectif est d'aider les personnes et les organisations qui œuvrent à construire un monde enviable
+              pour les générations à venir.
+            </p>
+
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <script src="index.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+  <script>
+    const templateHackteur = document.getElementById('template-hackteur');
+    const templateÉcomanité = document.getElementById('template-écomanité');
+    const templateEmail = document.getElementById('template-email');
+
+    tippy('#tooltip-hackteur', {
+      content: templateHackteur.innerHTML,
+      allowHTML: true,
+      placement: 'left',
+      interactive: true,
+    });
+
+    tippy('#tooltip-écomanité', {
+      content: templateÉcomanité.innerHTML,
+      allowHTML: true,
+      placement: 'left',
+      interactive: true,
+    });
+
+    tippy('#email', {
+      content: templateEmail.innerHTML,
+      allowHTML: true,
+      placement: 'left',
+      interactive: true,
+    });
+
+  </script>
+</body>
+
 </html>
